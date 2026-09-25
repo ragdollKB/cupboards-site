@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="How Cupboards handles your notebook, AI requests, Apple Health, exports and support messages.">
+  <title>Privacy · Cupboards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="brand" href="index.html"><svg viewBox="0 0 28 34" fill="none" aria-hidden="true"><path d="M3 31V3h22v28M7 31V7h14v24M11 31V11h6v20M1 31h26" stroke="currentColor" stroke-width="1.2"/></svg>Cupboards</a>
+    <nav aria-label="Main"><a href="index.html">Home</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+    <article class="reading policy">
+      <p class="eyebrow">Your notebook, your choices</p>
+      <h1>Privacy, in plain words.</h1>
+      <p class="intro">Your notebook is stored on your device. AI is optional, and using it sends information to the provider you choose. Here’s what that means.</p>
+      <p class="small">Effective September 24, 2026 · Cupboards 1.0.5 (10) and later</p>
+      <div class="summary" aria-label="Privacy summary">
+        <ul>
+          <li><strong>Local notebook.</strong> Cupboards does not run a server that stores your notebook.</li>
+          <li><strong>Optional AI.</strong> With your permission, submitted words and relevant context go directly to Anthropic, OpenAI or Google Gemini.</li>
+          <li><strong>Separate copies.</strong> Provider records, exports, device backups and messages you send to support have their own storage and deletion rules.</li>
+        </ul>
+      </div>
+      <nav class="toc" aria-label="Privacy sections"><a href="#notebook">On your device</a><a href="#ai">AI sharing</a><a href="#health">Apple Health</a><a href="#controls">Your controls</a><a href="#support">Support &amp; website</a></nav>
+
+      <section id="notebook">
+        <h2>What stays in your notebook</h2>
+        <p>Cupboards stores your starting-point answers, focus, reflections, conversations, unsent drafts, narrative entries, practices, check-ins, saved insights and exploration history on your device. This includes AI responses and summaries you receive. Safety checks can also save a local record that help was offered, including a short excerpt of the text that triggered the check. These records can be included in notebook exports. Settings and provider permissions are stored locally too.</p>
+        <p>There is no Cupboards account or developer-operated notebook cloud service. The developer cannot open your notebook remotely. The app does not include advertising or a third-party analytics SDK.</p>
+        <p>Your API keys are stored separately in the device’s Keychain. They are sent to the matching provider to authenticate your requests, not included in notebook exports.</p>
+        <p>Local storage does not mean information can never leave your device: AI requests, exports and support messages are described below. Your device or computer backups may also include app data, depending on your backup settings. Cupboards does not manage those backups.</p>
+      </section>
+
+      <section id="ai">
+        <h2>When you use AI</h2>
+        <p>You choose a provider, supply your own API key, and allow sharing with that provider. Requests travel directly from the app to that provider over HTTPS, not through a Cupboards server.</p>
+        <p>A request can contain your submitted text and the context used by that feature: your focus, conversation messages, selected notebook material, reflection summaries, saved insights, narrative or practice information. Starting-point AI uses the answers you submit. AI-generated openings, follow-up questions, summaries and practices also make requests, sometimes without a new message from you.</p>
+        <p>For individual cupboard conversations, notebook context is limited to the current focus, explicitly kept insights and that cupboard’s conversation. Optional sleep and exercise context is described below. Other features can use different notebook context. Unsent chat drafts are not submitted as chat messages.</p>
+        <p>Your provider also receives connection and account information needed to handle the request, such as your IP address and API authentication. The developer does not receive a copy of these requests through a Cupboards backend.</p>
+        <p>Provider retention, safety review and model-training rules depend on the provider’s terms, service and account settings. Cupboards does not guarantee zero retention or erase provider-held records when you delete local notes. Check the terms for the account you use:</p>
+        <p>Keep optional provider model-training or data-sharing programs off when using personal notebook or Health information.</p>
+        <ul>
+          <li><a href="https://www.anthropic.com/legal/commercial-terms">Anthropic commercial terms</a> and <a href="https://platform.claude.com/docs/en/manage-claude/api-and-data-retention">API data retention</a>.</li>
+          <li><a href="https://developers.openai.com/api/docs/guides/your-data">OpenAI API data controls</a>. Cupboards requests <code>store: false</code>; this is not a guarantee that no safety or operational logs are retained.</li>
+          <li><a href="https://ai.google.dev/gemini-api/terms">Google Gemini API terms</a>. Cupboards requires you to confirm active billing for your key’s project. The app cannot verify this itself. Do not use unpaid Gemini access for personal information.</li>
+        </ul>
+        <p>You can leave AI disconnected and use local onboarding, read saved material and write local entries. Features that generate AI responses require an internet connection and provider access.</p>
+      </section>
+
+      <section id="health">
+        <h2>Apple Health is optional</h2>
+        <p>If you connect Apple Health, Cupboards requests read access to sleep, mindful sessions, resting heart rate, active energy, exercise time and steps. On supported systems it also requests State of Mind data. You choose which categories to allow. Cupboards does not write records to Apple Health.</p>
+        <p>Health information can help show context and fill parts of local check-ins. Values derived from Health can be saved in those check-ins and included in notebook exports.</p>
+        <p><strong>Optional AI context:</strong> connecting Health does not grant permission to share it with AI. In Settings, you can separately allow sleep and exercise sharing with the selected provider. This starts off. When enabled, wellbeing reflections and practices can include total sleep duration from last night and total exercise minutes from the last seven days. Other Health readings and raw records are not automatically included. Missing readings are not treated as zero.</p>
+        <p>You can inspect the summary in Settings and the context prepared for a cupboard conversation in its context section. Turning sharing off prevents these automatic summaries from being added to new requests and retries. It cannot recall requests already sent or remove Health details mentioned in earlier user messages, AI replies or saved notes that you subsequently share.</p>
+        <p>You can disconnect Health in Cupboards and manage or revoke the app’s access in Apple Health or iOS Settings. Revoking access does not erase previously saved check-ins, exports or information already sent to a provider.</p>
+      </section>
+
+      <section id="controls">
+        <h2>Your controls and separate copies</h2>
+        <ul>
+          <li><strong>Stop AI sharing.</strong> In Settings → AI Connection, select each provider you want to disable and turn off Allow sharing. This stops new requests and retries to that provider, but cannot recall information already sent.</li>
+          <li><strong>Remove a key.</strong> Use Remove Key for the selected provider. To invalidate the credential everywhere, revoke it with the provider too.</li>
+          <li><strong>Export.</strong> Settings → Data Management → Export Data creates a password-protected, encrypted notebook export. You choose where to save or share it. The exported file is a separate copy under your control.</li>
+          <li><strong>Delete.</strong> Delete All Data erases notebook records held by the app. API keys and provider preferences are separate; manage them in AI Connection. Archiving an exploration is not deletion.</li>
+        </ul>
+        <p>Notebook records remain until you delete them. Deleting them does not delete files you exported, older device backups, support correspondence or records retained by Apple or an AI provider. Manage those copies with the service or location that holds them.</p>
+        <p>Device security and HTTPS help protect information, but no device or online service can guarantee absolute security. Protect your device, keys and export password, and avoid submitting information you do not want processed by a provider.</p>
+      </section>
+
+      <section id="support">
+        <h2>When you contact support</h2>
+        <p>Email goes to <a href="mailto:cupboards.support@gmail.com">cupboards.support@gmail.com</a>, managed by the app’s developer using Gmail. Your address, message and any attachments are received by the developer and processed by Google’s email service. Please send only the details needed to explain the issue, never API keys or a full notebook export.</p>
+        <p>Support correspondence is used to answer requests and investigate problems. It is kept only as long as needed to resolve the request, handle related follow-up, and meet applicable legal obligations. You can ask for deletion at the same address; this does not erase copies held in your own mailbox or other services.</p>
+        <p>When you test through TestFlight, Apple automatically collects crash logs and usage information and shares them with the developer. These can include device details, session counts and your invitation email. Feedback you choose to send, including screenshots and comments, is also shared. This information is used to investigate issues and improve Cupboards, with the retention approach above applying to developer-held beta support records. Apple prohibits developers from sharing TestFlight information onward with third parties and controls its own retention. See <a href="https://www.apple.com/legal/privacy/data/en/test-flight/">Apple’s TestFlight privacy information</a>. Do not include private notebook content in feedback.</p>
+        <h3>This website</h3>
+        <p>This website is hosted on GitHub Pages. These pages have no analytics, advertising, forms, embedded services or tracking scripts. GitHub logs visitors’ IP addresses for security. See <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHub Pages data collection</a> and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub’s privacy statement</a>. Following external links opens services with their own privacy practices.</p>
+      </section>
+
+      <section id="contact">
+        <h2>Questions or requests?</h2>
+        <p>Contact <a href="mailto:cupboards.support@gmail.com">cupboards.support@gmail.com</a> about privacy, support information or deletion of correspondence held by the developer. Local notebook deletion is handled inside the app; the developer does not hold a server copy to delete.</p>
+        <p>The initial beta is for invited adults aged 18 or older in the United States. Cupboards is a self-inquiry tool, not therapy or emergency care.</p>
+        <p>Updates to this policy will appear on this page with a revised date. Changes to what the app shares must also be reflected in its disclosures and permissions where required.</p>
+      </section>
+    </article>
+  </main>
+  <footer class="shell"><span>Cupboards</span><nav aria-label="Footer"><a href="support.html">Support</a><a href="privacy.html" aria-current="page">Privacy</a></nav></footer>
+</body>
+</html>

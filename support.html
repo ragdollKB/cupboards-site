@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Help with Cupboards: connecting AI, managing your notebook and reporting a problem.">
+  <title>Support · Cupboards</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header shell">
+    <a class="brand" href="index.html"><svg viewBox="0 0 28 34" fill="none" aria-hidden="true"><path d="M3 31V3h22v28M7 31V7h14v24M11 31V11h6v20M1 31h26" stroke="currentColor" stroke-width="1.2"/></svg>Cupboards</a>
+    <nav aria-label="Main"><a href="index.html">Home</a></nav>
+  </header>
+  <main id="main" class="shell" tabindex="-1">
+    <article class="reading support-page">
+      <h1>Support</h1>
+      <p>For questions, problems or feedback, email <a href="mailto:cupboards.support@gmail.com">cupboards.support@gmail.com</a>.</p>
+      <p class="small">Please don’t include API keys, private reflections or notebook exports.</p>
+
+      <section class="section" aria-labelledby="questions-title">
+        <h2 id="questions-title">Common questions</h2>
+        <details><summary>How do I connect an AI provider?</summary><p>Open Settings → AI Connection. Choose Anthropic, OpenAI or Google Gemini, add your own API key, and review the sharing permission. Google requires a project with active billing. Provider usage is billed separately from a chat subscription.</p><p>Saving a key stores it on this device; it doesn’t confirm that the provider accepts it. Never send a key to support.</p></details>
+        <details><summary>What if AI won’t respond?</summary><p>Check your internet connection, selected provider, saved key and sharing permission. Check your provider account for billing, usage limits and access to the model shown in AI Connection’s data details. For Google, confirm that the key’s project really has active billing.</p><p>If it still fails, email the error message with private content removed. You can still read saved notes and write local entries without AI. Don’t delete your notebook or reinstall the app just to troubleshoot.</p></details>
+        <details><summary>How do I stop AI sharing?</summary><p>In Settings → AI Connection, select the provider and turn off “Allow sharing.” Permissions are separate for each provider. This blocks new requests and retries to that provider; it cannot recall a request already sent. You can also use Remove Key, and revoke the credential in your provider account.</p></details>
+        <details><summary>How do I save a copy or delete my notebook?</summary><p>In Settings → Data Management, use Export Data for a password-protected export, or Delete All Data to erase the app’s notebook records. Keep your export password somewhere safe. Importing an export replaces the current notebook, so export anything you want to keep first.</p><p>Deleting notebook data does not remove provider keys or sharing preferences. Use AI Connection to manage those separately. Exports, device backups and data already held by a provider are separate copies. See <a href="privacy.html#controls">your privacy controls</a>.</p></details>
+        <details><summary>Can I begin a different exploration?</summary><p>Use Settings → Restart onboarding to archive the current exploration and find a new focus. Earlier reflections remain separate. Preview welcome only replays the introduction; it does not reset your notebook.</p></details>
+        <details><summary>How do I report a problem?</summary><p>Email the support address above with your iPhone model, iOS version, Cupboards version, what you tried and what happened. A screenshot can help, but remove personal writing and identifying details first. TestFlight testers can also use TestFlight’s feedback tools.</p></details>
+      </section>
+
+      <aside class="safety" aria-label="Limits of support">
+        <p>Cupboards is for self-inquiry, not therapy, diagnosis or emergency care. AI can be wrong. This inbox is not monitored for emergencies. If you are in immediate danger, contact emergency services. In the US, call or text <a href="tel:988">988</a> for crisis support. <a href="https://988lifeline.org/">About the 988 Lifeline</a>.</p>
+      </aside>
+    </article>
+  </main>
+  <footer class="shell"><span>Cupboards</span><nav aria-label="Footer"><a href="support.html" aria-current="page">Support</a><a href="privacy.html">Privacy</a></nav></footer>
+</body>
+</html>
